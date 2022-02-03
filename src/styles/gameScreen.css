@@ -42,4 +42,5 @@
   background: blue;
   height: calc(var(--smallLength) / 2);
   width: calc(var(--smallLength) / 2);
+  transition: top 0.3s, left 0.3s;
 }
