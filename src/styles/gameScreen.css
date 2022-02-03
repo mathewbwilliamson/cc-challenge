@@ -1,0 +1,45 @@
+:root {
+  --smallLength: 50px;
+  --largeLength: 200px;
+}
+
+.bumper {
+  background-color: pink;
+  border: none;
+  width: var(--largeLength);
+  height: var(--smallLength);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bumper.left,
+.bumper.right {
+  width: var(--smallLength);
+  height: var(--largeLength);
+  top: var(--smallLength);
+}
+
+.bumper.left {
+  left: 0;
+}
+
+.bumper.right {
+  left: calc(var(--largeLength) + var(--smallLength));
+}
+
+.bumper.up,
+.bumper.down {
+  left: var(--smallLength);
+}
+
+.bumper.down {
+  top: calc(var(--largeLength) + var(--smallLength));
+}
+
+.ball {
+  position: absolute;
+  background: blue;
+  height: calc(var(--smallLength) / 2);
+  width: calc(var(--smallLength) / 2);
+}

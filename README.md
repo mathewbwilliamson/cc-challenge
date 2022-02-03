@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+# Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small project I did for fun based on an interview question that I recieved. The idea of the small project was to make a box with barriers to left, right, top, and bottom, along with a small "ball" in the middle.
 
-## Available Scripts
+Then on click of the barriers, the ball will move towards that barrier.
+
+## To Run It
 
 In the project directory, you can run:
 
@@ -11,36 +13,19 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Thoughts On Building
 
-### `npm test`
+Overall, a cool little project. I spent less than one hour doing this. I tried my best to point out some design decisions that I was making.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I also tried, even in this small project, to use a professional architecture. There weren't enough components to really have anything much to show. Oh well!
 
-### `npm run build`
+It was fun!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Improvements and Such
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Given more time, I would do the following:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- I would block the ball from moving past the barriers. My first solution of the challenge will not work because I made the barriers in CSS. This means that only CSS can see how wide and short the barriers are, therefore the "ball" will not know where it is in relation to the barriers. Whoops! To fix that, I would bring the barrier information in and control those via styles in the React components. Then it would be a calculation to see where the ball is in relation to the barriers.
+- Instead of hardcoding, I would give some way of changing the sizes of the barriers. It would be interesting to add draggable borders to each outer edge to change the sizes of things.
+- It only moves when you click, so why don't we start the ball always moving? Each barrier click would increase the speed of the ball.
+- Let's add some animations. Those are fun!
